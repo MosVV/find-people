@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import java.util.Random;
 
 @Service
-public class NameGenerator {
+public class NamesGenerator {
     private final String[] maleNames = {
             "Александр", "Иван", "Артем", "Дмитрий", "Николай",
             "Алексей", "Максим", "Сергей", "Виктор", "Павел",

@@ -7,6 +7,7 @@ import com.example.find_people.user.response.UserResponse;
 import com.example.find_people.user.routes.UserRoutes;
 import com.example.find_people.user.service.UserService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.data.domain.PageRequest;
@@ -19,7 +20,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class UserApiController {
 
     private final UserRepository userRepository;

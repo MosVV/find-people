@@ -1,6 +1,6 @@
 package com.example.find_people.base.routes;
 
-public class BaeRoutes {
+public class BaseRoutes {
 
     public static final String API = "/api/v1";
 

@@ -12,18 +12,18 @@ import java.util.List;
 @AllArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
-    private final NameGenerator nameGenerator;
+    private final NamesGenerator namesGenerator;
 
     public boolean init() {
         userRepository.deleteAll();
 
-        int repet = 10, dataPerLoop = 1000;
+        int repeat = 10, dataPerLoop = 1000;
 
-        for (int i = 0; i < repet; i++) {
+        for (int i = 0; i < repeat; i++) {
 
             List<UserEntity> all = new ArrayList<>();
             for (int dataIndex = 0; dataIndex < dataPerLoop; dataIndex++) {
-                NameGenerator.Name name = nameGenerator.generate();
+                NamesGenerator.Name name = namesGenerator.generate();
                 UserEntity user = UserEntity.builder()
                         .lastName(name.getLastName())
                         .firstName(name.getFirstName())
